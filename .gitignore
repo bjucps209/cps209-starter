@@ -1,0 +1,10 @@
+.vscode
+*.o
+*.so
+
+# Python exclusions
+__pycache__/
+*.py[cod]
+
+# Project 1
+webserver

@@ -1,0 +1,31 @@
+name: Instructor Tests
+
+on: [push]
+
+jobs:
+  build:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+    # Restore/cache install packages
+    - uses: pat-s/always-upload-cache@v2.1.3  # actions/cache@v1.0.3
+      id: cache-my-packages
+      with:
+        path: "~/my-packages"
+        key: my-packages-1
+    - name: Checkout code
+      # Checkout official tests
+      uses: actions/checkout@v2
+      with:
+        repository: bjucps209/submission-tests
+        path: tests
+    # Checkout student submission
+    - uses: actions/checkout@v2
+      with:
+        path: submission
+    # Execute tests
+    - name: Run tests
+      env:
+        MY_PKG_CACHE_HIT: ${{steps.cache-my-packages.outputs.cache-hit}}
+      run: bash tests/rungh.sh
+      
