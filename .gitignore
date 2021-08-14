@@ -1,10 +1,7 @@
 .vscode
-*.o
-*.so
-
-# Python exclusions
-__pycache__/
-*.py[cod]
-
-# Project 1
-webserver
+*.class
+build
+bin
+.idea
+gradle
+gradlew*
