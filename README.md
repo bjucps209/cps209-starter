@@ -1,3 +1,3 @@
 # README
 
-Please upload your assignment files here.
+Please upload assignment files here.
