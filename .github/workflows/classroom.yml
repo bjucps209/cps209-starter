@@ -11,7 +11,7 @@ jobs:
       # Checkout official tests
       uses: actions/checkout@v2
       with:
-        repository: bjucps209/submission-tests
+        repository: bjucps/cps209-tests
         path: tests
     # Checkout student submission
     - uses: actions/checkout@v2
