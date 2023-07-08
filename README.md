@@ -1,4 +1,3 @@
 # README
 
-Please upload assignment files here. After uploading, wait about 1 minute, then refresh this
-page to see results of submission checks.
+Please upload assignment files here. Run ./aclean to remove unnecessary files. Be sure to include all source code, tests, and media.
